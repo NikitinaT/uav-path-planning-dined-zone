@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Twin Resilience — Visual Prototype</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --border: rgba(255,255,255,0.12);
+      --accent: #7aa2ff;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 50% 0%, rgba(122,162,255,0.18), transparent 60%), var(--bg);
+      color: var(--text);
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 18px 48px; }
+    header {
+      display:flex; gap:12px; align-items:baseline; justify-content:space-between; flex-wrap:wrap;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 22px; margin: 0; letter-spacing: 0.2px; }
+    .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+    }
+    video { width: 100%; border-radius: 12px; display:block; background: #000; }
+    .meta {
+      margin-top: 12px;
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .pill {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.18);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 16px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Connectivity-Aware UAV Mission Modeling — Visual Prototype</h1>
+      <div class="sub">Scenario-based visualization of UAV operations under variable connectivity conditions.</div>
+    </div>
+    <div class="pill">Research prototype • GitHub</div>
+  </header>
+
+  <div class="card">
+    <video controls playsinline preload="metadata">
+      <source src="src/modeling.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="meta">
+      <div class="pill">Video: <code>frontend/public/assets/video/digital_twin_university_visual_prototype.mp4</code></div>
+      <div class="pill">Prototype: <a href="../.." target="_blank" rel="noreferrer">Repository root</a></div>
+    </div>
+
+    <footer>
+      The model demonstrates connectivity-aware UAV mission planning with Wi-Fi-based reconnection zones in a simulated environment.
+    </footer>
+  </div>
+</div>
+</html>
